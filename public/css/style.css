@@ -1,0 +1,16 @@
+.post-container {
+    transition: background-color 0.3s;
+  }
+  
+  .post-container:hover {
+    border-right: 1em solid #656565;
+    background-color: rgba(126, 126, 126, 0.2);
+    border-radius: 0.5em;
+  }
+  
+  body {
+    
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }

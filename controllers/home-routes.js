@@ -47,7 +47,7 @@ router.get("/post/:id", withAuth, async (req, res) => {
 });
 //route that renders the dashboard with posts and the user
 router.get("/dashboard", withAuth, async (req, res) => {
-    try{
+    try {
         const postData = await Post.findAll({
             where: {user_id: req.session.user_id},
             include: [{ model: User, attributes:["username"] }],
@@ -59,7 +59,7 @@ router.get("/dashboard", withAuth, async (req, res) => {
             posts,
             logged_in: req.session.logged_in,
         });
-    }catch (err) {
+    } catch (err) {
         res.status(500).json(err);
     }
 });
@@ -75,6 +75,7 @@ router.get("/signup", (req, res) => {
         res.redirect("/dashboard");
         return;
     }
+    
     res.render("signup");
 });
 

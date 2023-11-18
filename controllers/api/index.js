@@ -6,7 +6,7 @@ const commentRoutes = require("./comment-routes");
 
 
 //Setting up the routes for the application
-router.use("/users", userRoutes);
+router.use("/user", userRoutes);
 router.use("/post", postRoutes);
 router.use("/comments", commentRoutes);
 

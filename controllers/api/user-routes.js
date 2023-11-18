@@ -24,6 +24,7 @@ router.post("/signup", async (req, res) => {
         newUser.password = req.body.password;
 
         const userData = await newUser.save();
+        
         req.session.save(() => {
             req.session.user_id = userData.id;
             req.session.logged_in = true;
